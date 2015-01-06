@@ -2,11 +2,11 @@
 
 <article class="post post-single">
     <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
-    <h1 class="post-title">{{ .Params.titleja }}</h1>
+    <h1 class="post-title">{{ if isset .Params "titleja" }}{{ .Params.titleja }}{{ else }}{{ .Params.Title }}{{ end }}</h1>
 
     <div class="eyecatch">
         {{ if isset .Params "eyecatch" }}
-        <img src="/images/{{ .Params.eyecatch }}" alt="{{ .Params.titleja }}">
+        <img src="/images/{{ .Params.eyecatch }}" alt="{{ if isset .Params "titleja" }}{{ .Params.titleja }}{{ else }}{{ .Params.Title }}{{ end }}">
         {{ else }}
         <img src="/images/nopicture.png" alt="no_picture">
         {{ end }}
@@ -39,7 +39,7 @@
             {{ $page := . }}
             {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
             {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
-            <li><a href="{{ $page.Permalink }}">{{ $page.Params.titleja }}</a></li>
+            <li><a href="{{ $page.Permalink }}">{{ if isset $page.Params "titleja" }}{{ $page.Params.titleja }}{{ else }}{{ $page.Params.Title }}{{ end }}</a></li>
             {{ end }}
             {{ end }}
         </ul>
@@ -52,14 +52,14 @@
                 {{ if .Prev }}
                 <a href="{{ .Prev.Permalink }}">
                     <i class="fa fa-chevron-left"></i>
-                    {{ .Prev.Params.titleja }}
+                    {{ if isset .Prev.Params "titleja" }}{{ .Prev.Params.titleja }}{{ else }}{{ .Prev.Params.Title }}{{ end }}
                 </a>
                 {{ end }}
             </div>
             <div class="next">
                 {{ if .Next }}
                 <a href="{{ .Next.Permalink }}">
-                    {{ .Next.Params.titleja }}
+                    {{ if isset .Next.Params "titleja" }}{{ .Next.Params.titleja }}{{ else }}{{ .Next.Params.Title }}{{ end }}
                     <i class="fa fa-chevron-right"></i>
                 </a>
                 {{ end }}
