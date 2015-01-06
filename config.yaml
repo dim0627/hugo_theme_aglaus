@@ -1,4 +1,4 @@
-BaseUrl: "http://yet.unresolved.xyz/hugo_theme_aglaus"
+BaseUrl: "http://example.com"
 LanguageCode: "en-us"
 Title: "Aglaus"
 
@@ -7,11 +7,12 @@ Params:
   Birth: "Sun, Feb 26, 1989"
   DateForm: "Mon, Jan 2, 2006"
   GoogleAnalyticsUserID: "Your ID."
-  GravatarHash: "Your ID."
+  GravatarHash: "Your Hash."
   Facebook: "Your ID."
   Twitter: "Your ID."
   Github: "Your ID."
   ShowRelatedPost: True
+  Disqus: "Your Disqus."
 
 Indexes:
   tag: "tags"
