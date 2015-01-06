@@ -49,15 +49,6 @@ pre {
     border-radius: 5px;
 }
 
-.post>h1,
-.post>h2,
-.post>h3,
-.post>h4,
-.post>h5,
-.post>h6 {
-    font-weight: bold;
-}
-
 .post-date {
     margin-bottom: 0;
 }
@@ -105,7 +96,11 @@ pre {
     max-width: 250px;
 }
 
-.post-content>h2 {
+.post-content>h1,
+.post-content>h2,
+.post-content>h3,
+.post-content>h4,
+.post-content>h5, {
     border-bottom: 1px dotted #ddd;
     margin-top: 2rem;
 }
