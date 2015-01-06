@@ -3,21 +3,21 @@ LanguageCode: "en-us"
 Title: "Aglaus"
 
 Params:
-  Author: "Daisuke Tsuji"
+  Author: "Your name."
   Birth: "Sun, Feb 26, 1989"
   DateForm: "Mon, Jan 2, 2006"
-  GoogleAnalyticsUserID: "UA-55005303-1"
-  GravatarHash: "1e092e9f2cda827deb8623be2e846936"
-  Facebook: "daisuke.tsuji.735"
-  Twitter: "dim0627"
-  Github: "dim0627"
+  GoogleAnalyticsUserID: "Your ID."
+  GravatarHash: "Your ID."
+  Facebook: "Your ID."
+  Twitter: "Your ID."
+  Github: "Your ID."
   ShowRelatedPost: True
 
 Indexes:
   tag: "tags"
 
-PermaLinks:
-  Post: /blog/:year/:month/:day/:title/
+permalinks:
+  post: /blog/:year/:month/:day/:title/
 
 MetadataFormat: "yaml"
 
