@@ -1,0 +1,10 @@
+{{ partial "default_head.html" . }}
+
+<div class="post">
+    <h1 class="post-title">{{ .Params.titleja }}</h1>
+        {{ range .Data.Pages }}
+        {{ .Render "li"}}
+        {{ end }}
+</div>
+
+{{ partial "default_foot.html" . }}

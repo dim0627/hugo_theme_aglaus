@@ -1,0 +1,87 @@
+{{ partial "default_head.html" . }}
+
+<article class="post post-single">
+    <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
+    <h1 class="post-title">{{ .Params.titleja }}</h1>
+
+    <div class="eyecatch">
+        {{ if isset .Params "eyecatch" }}
+        <img src="/images/{{ .Params.eyecatch }}" alt="{{ .Params.titleja }}">
+        {{ else }}
+        <img src="/images/nopicture.png" alt="no_picture">
+        {{ end }}
+    </div>
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
+    <aside>
+        <!-- Related post. -->
+        <h3>関連する投稿</h3>
+
+        {{ $baseurl := .Site.BaseUrl }}
+        <ul class="post-tags">
+            {{ range .Params.tags }}
+            <li>
+                <a href="{{ $baseurl }}/tags/{{ . | urlize }}">
+                    <i class="fa fa-tags"></i>
+                    {{ . }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+
+        <ul class="related-post">
+            {{ $page_link := .Permalink }}
+            {{ $tags := .Params.tags }}
+            {{ range .Site.Recent }}
+            {{ $page := . }}
+            {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+            {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+            <li><a href="{{ $page.Permalink }}">{{ $page.Params.titleja }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </aside>
+
+    <!-- Pagination. -->
+    <footer>
+        <div class="move">
+            <div class="prev">
+                {{ if .Prev }}
+                <a href="{{ .Prev.Permalink }}">
+                    <i class="fa fa-chevron-left"></i>
+                    {{ .Prev.Params.titleja }}
+                </a>
+                {{ end }}
+            </div>
+            <div class="next">
+                {{ if .Next }}
+                <a href="{{ .Next.Permalink }}">
+                    {{ .Next.Params.titleja }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- disqus. -->
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'unresolved'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </footer>
+
+</article>
+
+{{ partial "default_foot.html" . }}

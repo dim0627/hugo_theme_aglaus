@@ -1,0 +1,20 @@
+<article class="post">
+    <div class="eyecatch">
+        {{ if isset .Params "eyecatch" }}
+        <a href="{{ .Permalink }}"><img src="/images/{{ .Params.eyecatch }}" alt="{{ .Params.titleja }}"></a>
+        {{ else }}
+        <a href="{{ .Permalink }}"><img src="/images/nopicture.png" alt="no_picture"></a>
+        {{ end }}
+    </div>
+    <div class="data">
+        <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
+        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Params.titleja }}</a></h1>
+        <div class="summary">{{ .Summary }}</div>
+    </div>
+    <footer class="readon">
+        <a href="{{ .Permalink }}">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </footer>
+</article>
+<hr>
