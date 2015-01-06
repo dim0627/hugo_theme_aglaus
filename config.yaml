@@ -13,7 +13,7 @@ Params:
   Github: "dim0627"
 
 Indexes:
-  Tag: "tags"
+  tag: "tags"
 
 PermaLinks:
   Post: /blog/:year/:month/:day/:title/
