@@ -1,0 +1,12 @@
+name = "Aglaus"
+license = "MIT"
+licenselink = "https://github.com/dim0627/hugo_theme_aglaus"
+description = "Aglaus is list design with eyecatch theme."
+homepage = "http://yet.unresolved.xyz/hugo_theme_aglaus"
+tags = ["blog", "list", "eyecatch"]
+features = ["blog"]
+
+[author]
+    name = "Daisuke Tsuji"
+    homepage = "http://yet.unresolved.xyz"
+
