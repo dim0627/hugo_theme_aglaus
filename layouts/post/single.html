@@ -16,6 +16,7 @@
         {{ .Content }}
     </div>
 
+    {{ if .Site.Params.ShowRelatedPost }}
     <aside>
         <!-- Related post. -->
         <h3>関連する投稿</h3>
@@ -44,6 +45,7 @@
             {{ end }}
         </ul>
     </aside>
+    {{ end }}
 
     <!-- Pagination. -->
     <footer>

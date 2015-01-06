@@ -11,6 +11,7 @@ Params:
   Facebook: "daisuke.tsuji.735"
   Twitter: "dim0627"
   Github: "dim0627"
+  ShowRelatedPost: False
 
 Indexes:
   tag: "tags"
