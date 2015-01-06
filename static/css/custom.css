@@ -67,6 +67,10 @@ pre {
     margin-bottom: 50px;
 }
 
+.post-content>img {
+    display: inline;
+}
+
 .eyecatch {
     float: left;
     padding: 10px;
