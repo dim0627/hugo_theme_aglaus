@@ -100,7 +100,7 @@ pre {
 .post-content>h2,
 .post-content>h3,
 .post-content>h4,
-.post-content>h5, {
+.post-content>h5 {
     border-bottom: 1px dotted #ddd;
     margin-top: 2rem;
 }
