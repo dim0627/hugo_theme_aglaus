@@ -67,10 +67,6 @@ pre {
     margin-bottom: 50px;
 }
 
-.post-content>img {
-    display: inline;
-}
-
 .eyecatch {
     float: left;
     padding: 10px;
@@ -205,6 +201,7 @@ ul.post-tags>li>a:hover {
     max-width: 100%;
     padding: 5px;
     background-color: #f9f9f9;
+    display: inline;
 }
 
 li.list {
