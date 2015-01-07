@@ -68,11 +68,13 @@
             </div>
         </div>
 
+        {{ if isset .Site.Params "Disqus" }}
+        {{ if .Params.comments }}
         <!-- disqus. -->
         <div id="disqus_thread"></div>
         <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'unresolved'; // required: replace example with your forum shortname
+var disqus_shortname = '{{ .Site.Params.Disqus }}'; // required: replace example with your forum shortname
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
@@ -82,6 +84,8 @@ var disqus_shortname = 'unresolved'; // required: replace example with your foru
 })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        {{ end }}
+        {{ end }}
     </footer>
 
 </article>
