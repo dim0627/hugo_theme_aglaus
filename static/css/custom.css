@@ -28,14 +28,22 @@ pre {
     max-width: 100%;
 }
 
-.masthead-title {
+.masthead {
     text-align: center;
+}
+
+.masthead-title {
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .masthead-title a {
     font-family:'Lobster', cursive;
     text-decoration: none;
+}
+
+a.fixed-link {
+    padding: 0 10px;
 }
 
 .post {
@@ -73,12 +81,6 @@ pre {
     padding-right: 30px;
 }
 
-.eyecatch:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
 .eyecatch>a>img {
     width: 100%;
     max-width: 120px;
@@ -93,7 +95,7 @@ pre {
 
 .post-single>.eyecatch>img {
     display: inline;
-    max-width: 250px;
+    max-height: 250px;
 }
 
 .post-content>h1,
@@ -119,16 +121,14 @@ pre {
 .readon {
     text-align: center;
     padding-top: 20px;
+    clear: both;
 }
 
 .readon>a {
-    padding: 10px;
     display: block;
-    border-radius: 50%;
+    border-radius: 3px;
     background-color: #eee;
-    border: 5px solid #ddd;
-    max-width: 60px;
-    max-height: 60px;
+    width: 150px;
     margin: auto;
 }
 

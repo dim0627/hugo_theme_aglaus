@@ -22,7 +22,7 @@
 {{ else }}
 <!-- Article -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="{{ if isset .Params "titleja" }}{{ .Params.titleja }}{{ else }}{{ .Title }}{{ end }} &middot; {{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
 {{ if isset .Params "eyecatch" }}
 <meta property="og:image" content="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}">
 {{ end }}
@@ -37,7 +37,7 @@
     {{ else if in .Url "/tags/" }}
     {{ .Site.Title }}
     {{ else }}
-    {{ if isset .Params "titleja" }}{{ .Params.titleja }}{{ else }}{{ .Title }}{{ end }} &middot; {{ .Site.Title }}
+    {{ .Title }}
     {{ end }}
 </title>
 

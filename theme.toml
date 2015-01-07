@@ -1,7 +1,7 @@
 name = "Aglaus"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme_aglaus"
-description = "Aglaus is list design with eyecatch theme."
+licenselink = "https://github.com/dim0627/hugo_theme_aglaus/blob/master/LICENSE.md"
+description = "Aglaus is list design with eyecatch theme.Inspired by lanyon."
 homepage = "http://yet.unresolved.xyz/hugo_theme_aglaus"
 tags = ["blog", "list", "eyecatch"]
 features = ["blog"]
