@@ -1,5 +1,8 @@
 # Aglaus
 
+    Sorry, I do not have a good at English.
+    It is naive English, but please acknowledge.
+
 Aglaus is a single-column theme for [Hugo](http://gohugo.io/).
 
 ![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/top.png)
