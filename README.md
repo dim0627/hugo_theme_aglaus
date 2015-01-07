@@ -2,7 +2,9 @@
 
 Aglaus is a single-column theme for [Hugo](http://gohugo.io/).
 
+![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/top.png)
 
+![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/bottom.png)
 
 ## Features
 
