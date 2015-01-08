@@ -13,6 +13,7 @@ Params:
   Github: "Your ID."
   ShowRelatedPost: True
   Disqus: "Your Disqus."
+  SyntaxHighlightTheme: "solarized_dark.min.css"
 
 Indexes:
   tag: "tags"

@@ -9,6 +9,8 @@ Aglaus is a single-column theme for [Hugo](http://gohugo.io/).
 
 ![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/bottom.png)
 
+![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/post.png)
+
 ## Features
 
 * Google Analytics
@@ -47,7 +49,7 @@ If you would like to install all of the available hugo themes, simply clone the 
 ``` yaml
 BaseUrl: "http://example.com"
 LanguageCode: "en-us"
-Title: "Site name."
+Title: "Aglaus"
 
 Params:
   Author: "Your name."
@@ -60,6 +62,7 @@ Params:
   Github: "Your ID."
   ShowRelatedPost: True
   Disqus: "Your Disqus."
+  SyntaxHighlightTheme: "solarized_dark.min.css"
 
 Indexes:
   tag: "tags"

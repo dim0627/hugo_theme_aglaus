@@ -5,30 +5,11 @@
 <div class="posts">
     {{ range first $pagination .Data.Pages }}
     {{ if eq .Type "post"}}
-    <article class="post">
-        <div class="eyecatch">
-            {{ if isset .Params "eyecatch" }}
-            <a href="{{ .Permalink }}"><img src="/images/{{ .Params.eyecatch }}" alt="{{ .Title }}"></a>
-            {{ else }}
-            <a href="{{ .Permalink }}"><img src="/images/nopicture.png" alt="no_picture"></a>
-            {{ end }}
-        </div>
-        <div class="data">
-            <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
-            <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-            <div class="summary">{{ .Summary }}</div>
-        </div>
-        <footer class="readon">
-            <a href="{{ .Permalink }}">
-                <i class="fa fa-chevron-down"></i>
-            </a>
-        </footer>
-    </article>
-    <hr>
+    {{ .Render "li" }}
     {{ end }}
     {{ end }}
     <div class="all-entries">
-        <a href="/post">All Entries</a>
+        <a href="{{ .Site.BaseUrl }}/post">All Entries</a>
     </div>
 </div>
 
