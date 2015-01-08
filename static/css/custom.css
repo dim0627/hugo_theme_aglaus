@@ -23,6 +23,10 @@ pre {
     padding: 0;
 }
 
+blockquote {
+    background-color: #eee;
+}
+
 .container {
     width: 50rem;
     max-width: 100%;
@@ -105,10 +109,6 @@ a.fixed-link {
 .post-content>h5 {
     border-bottom: 1px dotted #ddd;
     margin-top: 2rem;
-}
-
-.post>pre code {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .summary {
