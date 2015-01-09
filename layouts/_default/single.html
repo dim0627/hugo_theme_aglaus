@@ -6,9 +6,9 @@
 
     <div class="eyecatch">
         {{ if isset .Params "eyecatch" }}
-        <img src="/images/{{ .Params.eyecatch }}" alt="{{ .Title }}">
+        <img src="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}" alt="{{ .Title }}">
         {{ else }}
-        <img src="/images/nopicture.png" alt="no_picture">
+        <img src="{{ .Site.BaseUrl }}/images/nopicture.png" alt="no_picture">
         {{ end }}
     </div>
 
