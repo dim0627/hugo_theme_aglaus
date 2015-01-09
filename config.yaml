@@ -14,6 +14,7 @@ Params:
   ShowRelatedPost: True
   Disqus: "Your Disqus."
   SyntaxHighlightTheme: "solarized_dark.min.css"
+  ShowTagCloud: True
 
 Indexes:
   tag: "tags"
