@@ -1,7 +1,23 @@
 
-{{ if isset .Site.Params "GravatarHash" }}
 <aside class="sidebar-wrapper">
     <div class="container">
+        {{ if .Site.Params.ShowTagCloud }}
+        <div class="tags tag-cloud">
+            <h2>Tags</h2>
+            <ul class="post-tags">
+                {{ $baseurl := .Site.BaseUrl }}
+                {{ range $name, $value := .Site.Taxonomies.tags }}
+                <li>
+                    <!--a href="{{ $baseurl }}/tags/{{ $name | urlize }}" style="font-size: {{ add 8 (mul 3 $value.Count) }}px;"-->
+                    <a href="{{ $baseurl }}/tags/{{ $name | urlize }}">
+                        {{ $name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+        {{ if isset .Site.Params "GravatarHash" }}
         <div id="profile">
             <div class="eyecatch">
                 <img id="photo" src="/images/nopicture.png" alt="profile">
@@ -24,20 +40,7 @@
                 <ul id="urls" class="post-tags"></ul>
             </div>
         </div>
-        <!--div class="categories">
-            <ul class="post-categories">
-                {{ $baseurl := .Site.BaseUrl }}
-                {{ range $name, $value := .Site.Taxonomies.categories }}
-                <li>
-                    <a href="{{ $baseurl }}/categories/{{ $name | urlize }}" style="font-size: {{ add 8 (mul 4 $value.Count) }}px;">
-                        <i class="fa fa-tags"></i>
-                        {{ $name }}
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-        </div-->
+        {{ end }}
     </div>
 </aside>
-{{ end }}
 
