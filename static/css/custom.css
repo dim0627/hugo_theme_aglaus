@@ -27,6 +27,10 @@ blockquote {
     background-color: #eee;
 }
 
+blockquote p {
+    white-space: pre-line;
+}
+
 .container {
     width: 50rem;
     max-width: 100%;
