@@ -297,3 +297,11 @@ ul#urls>li {
 #disqus_thread {
     margin-bottom: 50px;
 }
+
+@media (max-width: 38rem) {
+    .post-title:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
