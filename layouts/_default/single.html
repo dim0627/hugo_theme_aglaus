@@ -17,7 +17,7 @@
     </div>
 
     {{ if .Site.Params.ShowRelatedPost }}
-    <aside>
+    <aside class="post-related">
         <!-- Related post. -->
         <h3>Related Post</h3>
 
@@ -33,7 +33,7 @@
             {{ end }}
         </ul>
 
-        <ul class="related-post">
+        <ul>
             {{ $page_link := .Permalink }}
             {{ $tags := .Params.tags }}
             {{ range .Site.Recent }}
