@@ -16,36 +16,48 @@
         {{ .Content }}
     </div>
 
-    {{ if .Site.Params.ShowRelatedPost }}
-    <aside class="post-related">
+    <aside>
+        <div class="post-share">
+            <h3>Share</h3>
+            <a id="share-fb" href="http://www.facebook.com/sharer.php?src=bm&u=&t=" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" alt="Facebook"/></a>
+            <a id="share-twitter" href="http://twitter.com/intent/tweet?url=&text=&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" alt="Twitter"/></a>
+            <a id="share-googleplus" href="https://plus.google.com/share?url=" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/google_plusone_share.png" alt="Google+"/></a>
+            <a id="share-hatena" href="http://b.hatena.ne.jp/add?mode=confirm&url=" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/hatena.png" alt="Hatena"/></a>
+            <a id="share-pocket" href="http://getpocket.com/edit?url=&title=" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/pocket.png" alt="Pocket"/></a>
+
+        </div>
+
+        {{ if .Site.Params.ShowRelatedPost }}
         <!-- Related post. -->
-        <h3>Related Post</h3>
 
         {{ $baseurl := .Site.BaseUrl }}
-        <ul class="post-tags">
-            {{ range .Params.tags }}
-            <li>
-                <a href="{{ $baseurl }}/tags/{{ . | urlize }}">
-                    <i class="fa fa-tags"></i>
-                    {{ . }}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
+        <div class="post-related">
+            <h3>Related Post</h3>
+            <ul class="post-tags">
+                {{ range .Params.tags }}
+                <li>
+                    <a href="{{ $baseurl }}/tags/{{ . | urlize }}">
+                        <i class="fa fa-tags"></i>
+                        {{ . }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
 
-        <ul>
-            {{ $page_link := .Permalink }}
-            {{ $tags := .Params.tags }}
-            {{ range .Site.Recent }}
-            {{ $page := . }}
-            {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
-            {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
-            <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
-            {{ end }}
-            {{ end }}
-        </ul>
+            <ul>
+                {{ $page_link := .Permalink }}
+                {{ $tags := .Params.tags }}
+                {{ range .Site.Recent }}
+                {{ $page := . }}
+                {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+                {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+                <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+                {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
     </aside>
-    {{ end }}
 
     <!-- Pagination. -->
     <footer>
