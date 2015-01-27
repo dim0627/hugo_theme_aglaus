@@ -43,16 +43,3 @@ $(function() {
         });
 });
 </script>
-
-<!-- Share Buttons -->
-<script>
-$(function() {
-    var u = encodeURIComponent(document.location.href);
-    var t = encodeURIComponent(document.title);
-    $("#share-fb").attr("href", "http://www.facebook.com/sharer.php?src=bm&u=" + u + "&t=" + t);
-    $("#share-twitter").attr("href", "http://twitter.com/intent/tweet?url=" + u + "&text=" + t + "&tw_p=tweetbutton");
-    $("#share-googleplus").attr("href", "https://plus.google.com/share?url=" + u);
-    $("#share-hatena").attr("href", "http://b.hatena.ne.jp/add?mode=confirm&url=" + u);
-    $("#share-pocket").attr("href", "http://getpocket.com/edit?url=" + u + "&title=" + t);
-});
-</script>
