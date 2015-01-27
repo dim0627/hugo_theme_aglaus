@@ -103,6 +103,7 @@ a.fixed-link {
     display: inline;
     margin: 0;
     border-radius: 0;
+    max-width: 35px;
 }
 
 .eyecatch {
