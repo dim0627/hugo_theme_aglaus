@@ -102,7 +102,7 @@ a.fixed-link {
 .post-share img {
     display: inline;
     margin: 0;
-    border-radius: 0;
+    border-radius: 2px;
     max-width: 35px;
 }
 
