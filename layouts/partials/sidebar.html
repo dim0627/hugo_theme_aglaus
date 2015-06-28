@@ -5,7 +5,7 @@
         <div class="tags tag-cloud">
             <h2>Tags</h2>
             <ul class="post-tags">
-                {{ $baseurl := .Site.BaseUrl }}
+                {{ $baseurl := .Site.BaseURL }}
                 {{ range $name, $value := .Site.Taxonomies.tags }}
                 <li>
                     <!--a href="{{ $baseurl }}/tags/{{ $name | urlize }}" style="font-size: {{ add 8 (mul 3 $value.Count) }}px;"-->

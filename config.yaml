@@ -1,4 +1,4 @@
-BaseUrl: "http://example.com"
+baseURL: "http://example.com"
 LanguageCode: "en-us"
 Title: "Aglaus"
 

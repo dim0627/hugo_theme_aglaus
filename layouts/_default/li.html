@@ -1,9 +1,9 @@
 <article class="post">
     <div class="eyecatch">
         {{ if isset .Params "eyecatch" }}
-        <a href="{{ .Permalink }}"><img src="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}" alt="{{ .Title }}"></a>
+        <a href="{{ .Permalink }}"><img src="{{ .Site.BaseURL }}/images/{{ .Params.eyecatch }}" alt="{{ .Title }}"></a>
         {{ else }}
-        <a href="{{ .Permalink }}"><img src="{{ .Site.BaseUrl }}/images/nopicture.png" alt="no_picture"></a>
+        <a href="{{ .Permalink }}"><img src="{{ .Site.BaseURL }}/images/nopicture.png" alt="no_picture"></a>
         {{ end }}
     </div>
     <div class="data">
