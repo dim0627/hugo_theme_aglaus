@@ -47,7 +47,7 @@ If you would like to install all of the available hugo themes, simply clone the 
 **config.yaml**
 
 ``` yaml
-BaseUrl: "http://example.com"
+BaseURL: "http://example.com"
 LanguageCode: "en-us"
 Title: "Aglaus"
 
