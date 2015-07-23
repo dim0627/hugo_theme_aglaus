@@ -5,6 +5,7 @@ description = "Aglaus is list design with eyecatch theme.Inspired by lanyon."
 homepage = "http://yet.unresolved.xyz/hugo_theme_aglaus"
 tags = ["blog", "list", "eyecatch"]
 features = ["blog"]
+min_version = 0.14
 
 [author]
     name = "Daisuke Tsuji"
