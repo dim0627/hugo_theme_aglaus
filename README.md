@@ -57,6 +57,7 @@ Params:
   DateForm: "Mon, Jan 2, 2006"
   GoogleAnalyticsUserID: "Your ID."
   GravatarHash: "Your Hash."
+  GravatarNameConvention: "LastnameFirstname"
   Facebook: "Your ID."
   Twitter: "Your ID."
   Github: "Your ID."

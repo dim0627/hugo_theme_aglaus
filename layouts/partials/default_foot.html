@@ -34,7 +34,14 @@ $(function() {
         .done(function(data) {
             var entry = data.entry[0];
             $("#photo").attr("src", entry.photos[0].value);
-            $("#username").html(entry.name.familyName + " " + entry.name.givenName);
+            {{ if and (isset .Site.Params "GravatarNameConvention") (eq (.Site.Params.GravatarNameConvention | html | lower) "firstnamelastname") }}{{/*
+            This if statement should allow people to swap the position of the
+            first and last name if they have (for example) a latin based name.
+            I don't know all of the different naming conventions used around
+            the world, but this should help with most names world-wide.
+            ~Frostyfrog
+            */}}$("#username").html(entry.name.givenName + " " + entry.name.familyName);{{ else }}{{/*
+            */}}$("#username").html(entry.name.familyName + " " + entry.name.givenName);{{ end }}
             $("#description").html(entry.aboutMe);
             entry.urls.forEach(function(el){
                 $("#urls").append($("<li><a href='" + el.value + "'>" + el.title + "</a></li>"));
