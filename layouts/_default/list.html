@@ -1,7 +1,9 @@
-<div class="index">
+<div class="list">
   {{ partial "header.html" . }}
 
-  {{ range .Paginator.Pages }}
+  <header class="title"><h1>{{ .Title }}</h1></header>
+
+  {{ range (.Paginate .Data.Pages).Pages }}
   {{ .Render "li" }}
   {{ end }}
 
