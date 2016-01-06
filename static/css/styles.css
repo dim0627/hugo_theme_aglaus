@@ -1,10 +1,16 @@
 html {
-  font-size: inherit;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 body {
   font-family: 'Open Sans', "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 16px;
+  font-size: inherit;
   -webkit-font-smoothing: antialiased;
   color: #000;
 }
@@ -51,7 +57,7 @@ a.tag:hover {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5 ,h6 { margin: 0; }
@@ -119,7 +125,13 @@ nav.paging .right {
 }
 
 article.li {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  article.li {
+    margin-bottom: 2rem;
+  }
 }
 
 article.li .image {
@@ -164,9 +176,16 @@ article.li .title {
   word-break: break-all
 }
 
+@media (max-width: 768px) {
+  article.li .title {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
 article.li .summary {
   color: #555;
-  max-height: 2.5rem;
+  max-height: 3.2rem;
   overflow: hidden;
   word-break: break-all;
   font-size: .8rem;
@@ -214,6 +233,7 @@ article.single .detail {
 
   article.single .title {
     font-size: 1.2rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -294,6 +314,12 @@ article.single .article-body h4:before {
   content: '\f0da';
   font-family: 'Fontawesome';
   margin-right: 5px;
+}
+
+article.single .article-body img {
+  width: 100%;
+  max-width: 400px;
+  outline: 2px solid #eee;
 }
 
 article.single .article-body p {
