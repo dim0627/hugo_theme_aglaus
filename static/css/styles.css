@@ -266,6 +266,12 @@ article.single .share a:hover {
   color: #333;
 }
 
+article.single .article-body {
+  max-width: 570px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
 article.single .article-body h1,
 article.single .article-body h2,
 article.single .article-body h3,
