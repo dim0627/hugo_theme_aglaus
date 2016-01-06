@@ -165,9 +165,10 @@ article.li .title {
 
 article.li .summary {
   color: #555;
-  max-height: 3rem;
+  max-height: 2.5rem;
   overflow: hidden;
-  word-break: break-all
+  word-break: break-all;
+  font-size: .8rem;
 }
 
 article.single {
@@ -263,7 +264,7 @@ article.single .article-body h6:first-child {
 }
 
 article.single .article-body h1 {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
   margin-bottom: 1rem;
   font-weight: 900;
 }
@@ -277,16 +278,18 @@ article.single .article-body h3,
 article.single .article-body h4,
 article.single .article-body h5,
 article.single .article-body h6 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: .5rem;
 }
 
-article.single .article-body h3 {
-  font-weight: 900;
+article.single .article-body h3:before {
+  content: '\f0c8';
+  font-family: 'Fontawesome';
+  margin-right: 5px;
 }
 
 article.single .article-body h4:before {
-  content: '\f0c8';
+  content: '\f0da';
   font-family: 'Fontawesome';
   margin-right: 5px;
 }
@@ -297,10 +300,25 @@ article.single .article-body p {
   word-break: break-all;
 }
 
+article.single .article-body blockquote {
+  padding: .5rem;
+  font-size: .8rem;
+  border-left: none;
+  background-color: #eee;
+}
+
+article.single .article-body blockquote p {
+  line-height: 1rem;
+}
+
+article.single .article-body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 article.single .article-body pre {
   padding: 0;
   border: none;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 article.single .article-body code:not(.hljs) {
