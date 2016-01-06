@@ -361,16 +361,6 @@ article.single .article-body code.hljs {
   font-size: .8rem;
 }
 
-article.single .article-body ul,
-article.single .article-body ol {
-  background-color: #eee;
-  display: inline-block;
-  padding: 5px;
-  padding-left: 30px;
-  padding-right: 10px;
-  font-size: .8rem;
-}
-
 article.single aside .section {
   margin-bottom: 2rem;
 }
