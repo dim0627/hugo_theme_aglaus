@@ -9,13 +9,13 @@
     <meta itemprop="description" content="{{ .Summary }}">
     <meta itemprop="url" content="{{ .Permalink }}">
     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-      <meta itemprop="url" content="{{ with .Params.image }}{{ $.Site.BaseURL }}/images/{{ . }}{{ else }}{{ .Site.BaseURL }}/images/logo.png{{ end }}" />
+      <meta itemprop="url" content="{{ with .Params.image }}{{ $.Site.BaseURL }}images/{{ . }}{{ else }}{{ .Site.BaseURL }}images/logo.png{{ end }}" />
       <meta itemprop="width" content="800">
       <meta itemprop="height" content="800">
     </div>
     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
       <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="{{ .Site.BaseURL }}/images/logo.jpg">
+        <meta itemprop="url" content="{{ .Site.BaseURL }}images/logo.jpg">
         <meta itemprop="width" content="100">
         <meta itemprop="height" content="100">
       </div>
@@ -28,7 +28,7 @@
     <header>
 
       <div class="clearfix">
-        <div class="image"{{ with .Params.image }} style="background-image: url({{ $.Site.BaseURL }}/images/{{ . }});"{{ end }}></div>
+        <div class="image"{{ with .Params.image }} style="background-image: url({{ $.Site.BaseURL }}images/{{ . }});"{{ end }}></div>
         <div class="detail">
           <time itemprop="datePublished" pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
           {{ with .Params.categories }}{{ range . }}<a href="{{ $.Site.BaseURL}}categories/{{ . | urlize }}" class="category">{{ . }}</a> {{ end }}{{ end }}
