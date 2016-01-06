@@ -93,7 +93,6 @@ footer.site {
   font-size: .8rem;
   padding: 3rem 0;
   border-top: 1px solid #eee;
-  margin-top: 2rem;
 }
 
 footer.site p {
@@ -134,6 +133,12 @@ article.li {
   }
 }
 
+article.li .image-wrapper {
+  display: table-cell;
+  height: 100px;
+  vertical-align: middle;
+}
+
 article.li .image {
   background-color: #eee;
   background-position: center;
@@ -154,10 +159,6 @@ article.li .detail {
 @media (max-width: 768px) {
   article.li .image {
     width: 50px;
-    height: 50px;
-  }
-
-  article.li .detail {
     height: 50px;
   }
 }
@@ -263,10 +264,6 @@ article.single .share a:hover {
   color: #333;
 }
 
-article.single .article-body {
-  margin-bottom: 4rem;
-}
-
 article.single .article-body h1,
 article.single .article-body h2,
 article.single .article-body h3,
@@ -304,16 +301,12 @@ article.single .article-body h6 {
   margin-bottom: .5rem;
 }
 
-article.single .article-body h3:before {
-  content: '\f0c8';
-  font-family: 'Fontawesome';
-  margin-right: 5px;
+article.single .article-body h3 {
+  font-weight: 900;
 }
 
-article.single .article-body h4:before {
-  content: '\f0da';
-  font-family: 'Fontawesome';
-  margin-right: 5px;
+article.single .article-body h4 {
+  text-decoration: underline;
 }
 
 article.single .article-body img {
@@ -360,8 +353,14 @@ article.single .article-body code.hljs {
   font-size: .8rem;
 }
 
-article.single aside {
-  margin-bottom: 4rem;
+article.single .article-body ul,
+article.single .article-body ol {
+  background-color: #eee;
+  display: inline-block;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 10px;
+  font-size: .8rem;
 }
 
 article.single aside .section {

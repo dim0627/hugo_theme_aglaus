@@ -1,6 +1,10 @@
 <article class="li">
   <a href="{{ .Permalink }}" class="clearfix">
-    <div class="pull-left image" style="background-image: url({{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});"></div>
+    <div class="pull-left">
+      <div class="image-wrapper">
+        <div class="image" style="background-image: url({{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});"></div>
+      </div>
+    </div>
     <div class="detail">
       <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
       <h2 class="title">{{ .Title }}</h2>
