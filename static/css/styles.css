@@ -41,6 +41,11 @@ a.tag {
   margin-bottom: 5px;
 }
 
+a.category {
+  color: #999;
+  font-size: .8rem;
+}
+
 a.tag:hover {
   color: #333;
 }

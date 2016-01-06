@@ -4,6 +4,8 @@
 * Disqus
 * Share Buttons(fb, twitter, google+, pocket)
 * Eye-catching Image
+* MicroData
+* Readable text(Customized Vertical Rhythm).
 
 # Installation
 
