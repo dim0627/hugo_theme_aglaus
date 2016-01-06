@@ -109,11 +109,9 @@ nav.paging .left,
 nav.paging .right {
   text-align: center;
   position: absolute;
-  display: inline-block;
   border: 1px solid #eee;
   border-bottom: 2px solid #eee;
-  padding-top: 8px;
-  color: #999;
+  color: #000;
   width: 35px;
   height: 35px;
   border-radius: 100%;
@@ -123,13 +121,20 @@ nav.paging .right {
   right: 0;
 }
 
+nav.paging a {
+  display: table-cell;
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
 article.li {
   margin-bottom: 3rem;
 }
 
 @media (max-width: 768px) {
   article.li {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -174,7 +179,8 @@ article.li time {
 }
 
 article.li .title {
-  word-break: break-all
+  word-break: break-all;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -190,10 +196,6 @@ article.li .summary {
   overflow: hidden;
   word-break: break-all;
   font-size: .8rem;
-}
-
-article.single {
-  margin-bottom: 2rem;
 }
 
 article.single header {
