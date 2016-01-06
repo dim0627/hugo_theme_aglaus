@@ -49,7 +49,7 @@
 
     <aside>
 
-      <div class="section">{{ range .Params.tags }}<a href="{{ $.Site.BaseURL}}tags/{{ . | urlize }}" class="tag">{{ . }}</a>{{ end }}</div>
+      {{ with .Params.tags }}<div class="section">{{ range . }}<a href="{{ $.Site.BaseURL}}tags/{{ . | urlize }}" class="tag">{{ . }}</a>{{ end }}</div>{{ end }}
 
       {{ with .Site.Params.disqusShortname }}
       <div id="disqus_thread"></div>
