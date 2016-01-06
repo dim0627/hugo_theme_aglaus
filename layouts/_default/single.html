@@ -28,7 +28,8 @@
     <header>
 
       <div class="clearfix">
-        <div class="image"{{ with .Params.image }} style="background-image: url({{ $.Site.BaseURL }}images/{{ . }});"{{ end }}></div>
+
+        <div class="image" style="background-image: url({{ $.Site.BaseURL }}/images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});"></div>
         <div class="detail">
           <time itemprop="datePublished" pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
           {{ with .Params.categories }}{{ range . }}<a href="{{ $.Site.BaseURL}}categories/{{ . | urlize }}" class="category">{{ . }}</a> {{ end }}{{ end }}

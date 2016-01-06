@@ -129,6 +129,7 @@ article.li .image {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+  box-shadow: 0 0 3px #333 inset;
 }
 
 article.li .detail {
@@ -187,6 +188,7 @@ article.single .image {
   height: 100px;
   border-radius: 100%;
   float: left;
+  box-shadow: 0 0 3px #333 inset;
 }
 
 article.single .detail {
