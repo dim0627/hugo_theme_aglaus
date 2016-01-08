@@ -134,7 +134,7 @@ article.li {
 
 @media (max-width: 768px) {
   article.li {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
