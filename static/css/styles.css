@@ -181,6 +181,7 @@ article.li time {
 article.li .title {
   word-break: break-all;
   font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 article.li .summary {
