@@ -46,6 +46,10 @@
 
     </header>
 
+    {{ if or (eq .Site.Params.toc true) (eq .Params.toc true) }}
+    <div class="toc">{{ .TableOfContents }}</div>
+    {{ end}}
+
     <div class="article-body" itemprop="articleBody">{{ .Content }}</div>
 
     <aside>

@@ -358,3 +358,65 @@ article.single .article-body code.hljs {
 article.single aside .section {
   margin-bottom: 2rem;
 }
+
+.toc {
+  max-width: 570px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+#TableOfContents {
+  display: inline-block;
+  font-size: .8rem;
+  line-height: 2rem;
+  background-color: #fafafa;
+  padding: .5rem 1rem;
+  padding-right: 1.5rem;
+}
+
+#TableOfContents code:not(.hljs) {
+  font-size: .7rem;
+}
+
+#TableOfContents ul {
+  margin-bottom: 0;
+}
+
+#TableOfContents a {
+  display: block;
+}
+
+#TableOfContents ul ul a {
+  text-decoration: none;
+}
+
+#TableOfContents>ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#TableOfContents>ul>li {
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+#TableOfContents>ul>li:last-child {
+  margin-bottom: 0;
+}
+
+#TableOfContents>ul>li>ul>li>a:before {
+  content: '\f0da';
+  font-family: Fontawesome;
+  margin-right: 5px;
+}
+
+#TableOfContents>ul ul {
+  padding-left: 0;
+  font-weight: normal;
+  list-style: none;
+}
+
+#TableOfContents>ul ul ul {
+  padding-left: 1.5rem;
+  list-style: none;
+}
