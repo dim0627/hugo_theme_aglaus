@@ -26,8 +26,9 @@ canonifyurls = true
 paginate = 3
 
 [params]
-  disqusShortname = "your disqus id."
-  ```
+  disqusShortname = "your disqus id." # optional
+  toc = true # optional, When set to TRUE this parameter, table of contents appears in all articles.
+```
 
 **example post**
 
@@ -46,6 +47,9 @@ categories = [
     "Development",
     "golang",
 ]
+
+image = "image.jpg" # optional
+toc = true # optional, When set to TRUE this parameter, table of contents appears in only this article.
 +++
 
 Contents here
