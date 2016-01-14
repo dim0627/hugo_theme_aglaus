@@ -1,5 +1,5 @@
+{{ partial "header.html" . }}
 <div class="index">
-  {{ partial "header.html" . }}
 
   {{ range .Paginator.Pages }}
   {{ .Render "li" }}
@@ -7,5 +7,5 @@
 
   {{ partial "pagination.html" . }}
 
-  {{ partial "footer.html" . }}
 </div>
+{{ partial "footer.html" . }}

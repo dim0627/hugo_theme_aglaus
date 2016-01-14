@@ -1,5 +1,5 @@
+{{ partial "header.html" . }}
 <div class="list terms">
-  {{ partial "header.html" . }}
 
   <header class="title"><h1>{{ .Title }}</h1></header>
 
@@ -7,5 +7,5 @@
   <a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/" class="{{ $.Data.Singular }}">{{ $key }}</a>
   {{ end }}
 
-  {{ partial "footer.html" . }}
 </div>
+{{ partial "footer.html" . }}

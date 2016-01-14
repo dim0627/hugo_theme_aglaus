@@ -1,6 +1,6 @@
-<div class="single">
-  {{ partial "header.html" . }}
+{{ partial "header.html" . }}
 
+<div class="single">
   <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
 
     <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="{{ .Site.BaseURL }}"/>
@@ -76,6 +76,6 @@
     </aside>
 
   </article>
-
-  {{ partial "footer.html" . }}
 </div>
+
+{{ partial "footer.html" . }}

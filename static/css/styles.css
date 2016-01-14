@@ -61,11 +61,11 @@ img {
 }
 
 h1, h2, h3, h4, h5 ,h6 { margin: 0; }
-h1 { font-size: 1.6rem; line-height: 2.4rem; }
-h2 { font-size: 1.4rem; line-height: 2.1rem; }
-h3 { font-size: 1.1rem; line-height: 1.7rem; }
-h4 { font-size: 1rem; line-height: 1.5rem; }
-h5 { font-size: 1rem; line-height: 1.5rem; }
+h1 { font-size: 1.6rem; line-height: 2rem; }
+h2 { font-size: 1.4rem; line-height: 1.8rem; }
+h3 { font-size: 1.1rem; line-height: 1.5rem; }
+h4 { font-size: 1rem; line-height: 1.4rem; }
+h5 { font-size: 1rem; line-height: 1.4rem; }
 
 header.site {
   text-align: center;
@@ -181,7 +181,7 @@ article.li time {
 article.li .title {
   word-break: break-all;
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }
 
 article.li .summary {
@@ -246,7 +246,7 @@ article.single .share {
 
 article.single .share a {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 6px;
   display: inline-block;
   border: 1px solid #eee;
   border-bottom: 2px solid #eee;
