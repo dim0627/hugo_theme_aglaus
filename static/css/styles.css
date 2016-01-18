@@ -330,6 +330,9 @@ article.single .article-body blockquote {
   border-left: none;
   background-color: #eee;
   font-size: .8rem;
+}
+
+article.single .article-body blockquote p {
   line-height: 1rem;
 }
 
