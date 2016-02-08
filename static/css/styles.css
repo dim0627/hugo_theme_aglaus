@@ -57,6 +57,7 @@ h5 { font-size: 1rem; line-height: 1rem; }
 header.site {
   margin-bottom: 3rem;
   padding: 1rem 0;
+  text-align: center;
 }
 
 header.site .title a {
