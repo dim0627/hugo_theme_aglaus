@@ -1,6 +1,6 @@
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
       <footer class="site">
         <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}&copy; {{ $.Site.LastChange.Year }} {{ if isset $.Site.Params "Author" }}{{ $.Site.Params.Author }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</p>
         <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
