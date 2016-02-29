@@ -129,10 +129,6 @@ article:first-child {
   padding-top: 0;
 }
 
-article header {
-  margin-bottom: 1.5rem;
-}
-
 article .image {
   background-position: center;
   background-size: cover;
@@ -171,9 +167,9 @@ article .title {
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: 900;
-  max-height: 3rem;
   overflow: hidden;
   transition-duration: .3s;
+  margin-bottom: 1rem;
 }
 
 article.li a:hover .title {
