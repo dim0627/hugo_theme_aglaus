@@ -129,6 +129,10 @@ article:first-child {
   padding-top: 0;
 }
 
+article header {
+  margin-bottom: 1.5rem;
+}
+
 article .image {
   background-position: center;
   background-size: cover;
@@ -169,7 +173,6 @@ article .title {
   font-weight: 900;
   overflow: hidden;
   transition-duration: .3s;
-  margin-bottom: 1rem;
 }
 
 article.li a:hover .title {
@@ -189,10 +192,6 @@ article.li a {
 article.li .summary {
   word-break: break-all;
   line-height: 1.5rem;
-}
-
-article.single header {
-  margin-bottom: .5rem;
 }
 
 article.single .share {
