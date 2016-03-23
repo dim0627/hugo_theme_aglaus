@@ -2,9 +2,8 @@
 
     <div class="container">
       <footer class="site">
-        <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}&copy; {{ $.Site.LastChange.Year }} {{ if isset $.Site.Params "Author" }}{{ $.Site.Params.Author }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</p>
-        <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
-        <p>Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+        <p>{{ with .Site.Copyright | safeHTML }}{{ . }}{{ else }}&copy; {{ $.Site.LastChange.Year }} {{ if isset $.Site.Params "Author" }}{{ $.Site.Params.Author }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a>, Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank" rel="nofollow">aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank" rel="nofollow">Daisuke Tsuji</a></p>
       </footer>
     </div>
 
