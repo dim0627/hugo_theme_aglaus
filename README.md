@@ -11,7 +11,12 @@
 
 # Installation
 
-[hugoThemes#Installing Themes](https://github.com/spf13/hugoThemes#installing-themes).
+Navigate to your Hugo site folder and run the following commands :
+
+    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/dim0627/hugo_theme_aglaus.git aglaus
+
 
 # Configuration
 
