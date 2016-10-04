@@ -1,12 +1,12 @@
-name = "Aglaus"
+name = "Beg"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme_aglaus/blob/master/LICENSE.md"
-description = "Aglaus is simple blog theme for hugo."
+licenselink = "https://github.com/dim0627/hugo_theme_beg/blob/master/LICENSE.md"
+description = "Bootstrap3 based theme for Hugo."
 tags = ["blog"]
-features = ["blog"]
-min_version = 0.15
+features = ["responsive", "thumbnail", "syntax highlight", "structured data", "ogp", "twitter cards"]
+min_version = 0.16
 
 [author]
-    name = "Daisuke Tsuji"
-    homepage = "http://yet.unresolved.xyz/"
+  name = "Daisuke Tsuji"
+  homepage = "https://yet.unresolved.xyz/"
 

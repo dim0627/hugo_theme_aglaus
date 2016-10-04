@@ -1,0 +1,17 @@
+{{ define "title" }}{{ .Title }} - {{ end }}
+
+{{ define "main" }}
+<div class="l-container">
+  <header class="p-page-title">
+    <div class="content-inner">
+      <h1 class="title">{{ .Title }}</h1>
+      <p>You are looking for articles could not be found.</p>
+    </div>
+  </header>
+
+  <ul class="p-articles">
+    {{ range first 5 .Site.Pages }}<li>{{ .Render "li_sm" }}</li>{{ end }}
+  </ul>
+</div>
+{{ end }}
+

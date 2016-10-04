@@ -1,4 +1,4 @@
-<article class="li article-{{ .Source.Path | md5 }}">
+<article class="li sm article-{{ .Source.Path | md5 }}">
   <div class="header-wrapper">
     <a href="{{ .Permalink }}" class="thumbnail" title="{{ .Title }}"></a>
     <header class="article-header">
@@ -15,6 +15,4 @@
       </div>
     </header>
   </div>
-  <div class="article-body summary">{{ .Summary }}</div>
-  <footer class="readmore"><a href="{{ .Permalink }}">READ MORE</a></footer>
 </article>

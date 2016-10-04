@@ -1,76 +1,23 @@
-{{ partial "header.html" . }}
+{{ define "title" }}{{ .Title }} - {{ end }}
 
-<div class="single">
-  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+{{ define "meta" }}
+{{ partial "single_meta.html" . }}
+{{ partial "single_json_ld.html" . }}
+{{ end }}
 
-    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="{{ .Site.BaseURL }}"/>
-    <meta itemprop="dateModified" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
-    <meta itemprop="headline" content="{{ .Title }}">
-    <meta itemprop="description" content="{{ .Summary }}">
-    <meta itemprop="url" content="{{ .Permalink }}">
-    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-      <meta itemprop="url" content="{{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }}" />
-      <meta itemprop="width" content="800">
-      <meta itemprop="height" content="800">
-    </div>
-    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="{{ .Site.BaseURL }}images/logo.jpg">
-        <meta itemprop="width" content="100">
-        <meta itemprop="height" content="100">
-      </div>
-      <meta itemprop="name" content="{{ .Site.Title }}">
-    </div>
-    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-      <meta itemprop="name" content="{{ .Site.Params.Author }}">
-    </div>
+{{ define "main" }}
+<div class="l-container">
+  {{ .Render "summary" }}
 
-    <header class="clearfix">
-      <div class="pull-left">
-        <div class="image" style="background-image: url({{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});"></div>
-      </div>
-
-      <div class="detail">
-        <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
-        <h1 class="title">{{ .Title }}</h1>
-      </div>
-    </header>
-
-    <div class="share">
-      <a href="http://www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
-      <a href="http://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
-      <a href="https://plus.google.com/share?url={{ .Permalink }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
-      <a href="http://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
-    </div>
-
-    {{ if or (eq .Site.Params.toc true) (eq .Params.toc true) }}<div class="toc">{{ .TableOfContents }}</div>{{ end }}
-
-    <div class="article-body" itemprop="articleBody">{{ .Content }}</div>
-
-    <aside>
-
-      {{ with .Params.tags }}<div class="section">{{ range . }}<a href="{{ $.Site.BaseURL}}tags/{{ . | urlize }}" class="tag">{{ . }}</a>{{ end }}</div>{{ end }}
-
-      {{ if and (ne .Site.Params.comment false) (ne .Params.comment false) }}
-      {{ with .Site.Params.disqusShortname }}
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  var disqus_shortname = '{{ . }}';
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      {{ end }}
-      {{ end }}
-
-    </aside>
-
-  </article>
+  {{ $recent_articles := (where .Site.Pages ".Source.Path" "!=" .Source.Path) }}
+  {{ if ne 0 (len $recent_articles) }}
+  <section>
+    <header><span>Latests</span></header>
+    <ul class="p-articles thin">
+      {{ range $recent_articles }}<li>{{ .Render "li_sm" }}</li>{{ end }}
+    </ul>
+  </section>
+  {{ end }}
 </div>
 
-{{ partial "footer.html" . }}
+{{ end }}

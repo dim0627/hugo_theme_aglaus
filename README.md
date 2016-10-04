@@ -1,68 +1,118 @@
+# What is this.
+
+This is the theme for Hugo that supports the [Accelerated Mobile Pages Project](https://www.ampproject.org/).
+
+[Hugo :: A fast and modern static website engine](https://gohugo.io/)
+
+## PC View
+
 ![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/screenshot.png)
+
+## SP View(Responsive)
+
+![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/responsive.png)
+
+## Article footer
+
+![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/taxonomy.png)
+
+## AMP supported
+
+![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/amp-valid.png)
 
 # Features
 
+* [Accelerated Mobile Pages Project](https://www.ampproject.org/) a.k.a AMP supported
+* Responsive design
 * Google Analytics
-* Disqus
-* Share Buttons(fb, twitter, google+, pocket)
-* Eye-catching Image
-* MicroData
-* Readable text(Customized Vertical Rhythm).
+* Thumbnail
+* High score by Google Page Speed Insight.
+* Share button
+* Structured data(Article and Breadcrumb)
+* Twitter cards
+* OGP
+* Specializing in SEO
 
-# Installation
+# `config.toml` example
 
-Navigate to your Hugo site folder and run the following commands :
+```
+baseurl = "https://example.com/"
+title = "SiteTitle"
 
-    $ mkdir themes
-    $ cd themes
-    $ git clone https://github.com/dim0627/hugo_theme_aglaus.git aglaus
-
-
-# Configuration
-
-**config.yaml**
-
-``` toml
-baseurl = "http://hugo.spf13.com/"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
-canonifyurls = true
-paginate = 3
+googleAnalytics = "UA-XXXXXXXX-XX" # Optional
 
 [params]
-  disqusShortname = "your disqus id." # optional
-  toc = true # optional, When set to TRUE this parameter, table of contents appears in all articles.
+  dateformat = "Jan 2, 2006" # Optional
 ```
 
-**example post**
+# Frontmatter example
 
-``` toml
+```
 +++
-title = "Getting Started with Hugo"
-description = ""
-tags = [
-    "go",
-    "golang",
-    "hugo",
-    "development",
-]
-date = "2014-04-02"
-categories = [
-    "Development",
-    "golang",
-]
-
-image = "image.jpg" # optional
-toc = true # optional, When set to TRUE this parameter, table of contents appears in only this article.
+date = "2016-09-28T17:00:00+09:00"
+title = "Article title here"
+thumbnail = "thumbnail.jpg" # Optional, referenced at `$HUGO_ROOT/static/images/thumbnail.jpg`
 +++
-
-Contents here
 ```
 
-# Contact us
+# Shortcodes
 
-Please mail to `dim0627@gmail.com` or SNS.
+## Iframe
 
-[https://www.facebook.com/daisuke.tsuji.735](https://www.facebook.com/daisuke.tsuji.735)
+```
+{{% iframe src="https://www.youtube.com/embed/XXXXXXX" w="560" h="315" %}}
+```
+
+## Image
+
+```
+{{% img src="images/image.jpg" w="600" h="400" %}}
+{{% img src="images/image.jpg" w="600" h="400" class="right" %}}
+{{% img src="images/image.jpg" w="600" h="400" class="left" %}}
+{{% img src="images/image.jpg" w="600" h="400" caption="Referenced from wikipedia." href="https://en.wikipedia.org/wiki/Lorem_ipsum" %}}
+```
+
+![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/include-images.png)
+
+## Clear
+
+Break float.
+
+```
+{{% img src="images/image.jpg" w="600" h="400" class="right" %}}
+
+brabrabra # Displayed left of the image.
+
+{{% clear %}}
+
+brabrabra # Displayed below of the image.
+```
+
+## Twitter
+
+```
+{{% twitter tweetid="780599416621297xxx" %}}
+```
+
+# Development mode
+
+Supported development mode.
+
+```
+env HUGO_ENV="DEV" hugo server --watch --buildDrafts=true --buildFuture=true -t aglaus
+```
+
+This mode is
+
+* Not show Google Analytics tags.
+* Show `IsDraft`.
+* Show `WordCount`.
+
+![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/development-mode.png)
+
+And set `{{ if ne (getenv "HUGO_ENV") "DEV" }} Set elements here. {{ end }}` if you want to place only in a production environment.
+
+# Colorscheme
+
+* [Material Design Colors, Material Colors, Color Palette \| Material UI](https://www.materialui.co/colors)
 
