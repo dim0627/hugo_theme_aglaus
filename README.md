@@ -108,8 +108,6 @@ This mode is
 * Show `IsDraft`.
 * Show `WordCount`.
 
-![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/development-mode.png)
-
 And set `{{ if ne (getenv "HUGO_ENV") "DEV" }} Set elements here. {{ end }}` if you want to place only in a production environment.
 
 # Colorscheme
