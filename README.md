@@ -51,7 +51,7 @@ googleAnalytics = "UA-XXXXXXXX-XX" # Optional
 +++
 date = "2016-09-28T17:00:00+09:00"
 title = "Article title here"
-thumbnail = "thumbnail.jpg" # Optional, referenced at `$HUGO_ROOT/static/images/thumbnail.jpg`
+thumbnail = "images/thumbnail.jpg" # Optional, referenced at `$HUGO_ROOT/static/images/thumbnail.jpg`
 +++
 ```
 
