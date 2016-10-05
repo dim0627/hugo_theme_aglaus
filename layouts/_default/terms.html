@@ -3,9 +3,7 @@
 {{ define "main" }}
 <div class="l-container">
   <header class="p-page-title">
-    <div class="content-inner">
-      <h1 class="title">{{ .Title }}</h1>
-    </div>
+    <h1 class="title">{{ .Title }}</h1>
   </header>
 
   <ul class="p-terms">
@@ -13,9 +11,7 @@
     {{ range $key, $value := .Data.Terms }}
     <li>
       <h2 class="terms-title">
-        <div class="content-inner thin">
-          <a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})
-        </div>
+        <a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})
       </h2>
     </li>
     {{ end }}
