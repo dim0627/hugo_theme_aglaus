@@ -25,11 +25,12 @@
 
   <body>
     {{ if ne (getenv "HUGO_ENV") "DEV" }}
+    {{ with .Site.GoogleAnalytics }}
     <amp-analytics type="googleanalytics" id="analytics1">
       <script type="application/json">
         {
           "vars": {
-            "account": "{{ .Site.GoogleAnalytics }}"
+            "account": "{{ . }}"
           },
           "triggers": {
             "trackPageview": {
@@ -40,6 +41,7 @@
         }
       </script>
     </amp-analytics>
+    {{ end }}
     {{ end }}
 
     <header class="l-header">
