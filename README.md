@@ -43,6 +43,11 @@ googleAnalytics = "UA-XXXXXXXX-XX" # Optional
 
 [params]
   dateformat = "Jan 2, 2006" # Optional
+  ampscripts = """ # Optional, scripts for AMP.
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+"""
 ```
 
 # Frontmatter example
