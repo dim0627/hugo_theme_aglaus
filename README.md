@@ -33,6 +33,15 @@ This is the theme for Hugo that supports the [Accelerated Mobile Pages Project](
 * OGP
 * Specializing in SEO
 
+## Installation
+
+```
+$ cd themes
+$ git clone https://github.com/dim0627/hugo_theme_aglaus.git
+```
+
+[Hugo \- Installing Hugo](http://gohugo.io/overview/installing/)
+
 # `config.toml` example
 
 ```
