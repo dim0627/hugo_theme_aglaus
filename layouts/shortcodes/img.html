@@ -1,5 +1,5 @@
 <figure{{ if .Get "class" }} class="{{ .Get "class" }}"{{ end }}>
-  <amp-img src="{{ $.Site.BaseURL }}{{ .Get "src" }}" alt="{{ .Page.Title }} {{ .Get "src" }}" width={{ .Get "w" | default "640" }} height={{ .Get "h" | default "400"}} layout="responsive"></amp-img>
+  <img src="{{ $.Site.BaseURL }}{{ .Get "src" }}" alt="{{ .Page.Title }} {{ .Get "src" }}">
   {{ if .Get "caption" }}
   <figcaption>
     {{ if .Get "href" }}
