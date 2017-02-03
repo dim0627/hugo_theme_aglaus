@@ -6,18 +6,5 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="l-container">
-  {{ .Render "summary" }}
-
-  {{ $recent_articles := (where .Site.Pages ".Source.Path" "!=" .Source.Path) }}
-  {{ if ne 0 (len $recent_articles) }}
-  <section>
-    <header><span>Latests</span></header>
-    <ul class="p-articles thin">
-      {{ range $recent_articles }}{{ if .IsPage }}<li>{{ .Render "li_sm" }}</li>{{ end }}{{ end }}
-    </ul>
-  </section>
-  {{ end }}
-</div>
-
+{{ .Render "summary" }}
 {{ end }}

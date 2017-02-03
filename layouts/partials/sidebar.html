@@ -1,0 +1,29 @@
+<aside class="l-sidebar">
+
+  <section class="sidebar">
+    <header>
+      <span>LATESTS</span>
+    </header>
+    <div>
+      {{ range first 10 (where .Site.Pages "IsPage" true) }}
+      {{ .Render "li_xs" }}
+      {{ end }}
+    </div>
+  </section>
+
+  {{ range $key, $value := .Site.Taxonomies }}
+  <section class="sidebar">
+    <header>
+      <span>{{ $key | singularize | upper }}</span>
+    </header>
+    <div>
+      <ul class="p-terms sm">
+        {{ range first 10 $value.ByCount }}
+        <li><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}" class="list-group-item">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+  {{ end }}
+
+</aside>

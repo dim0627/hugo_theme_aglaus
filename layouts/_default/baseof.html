@@ -7,6 +7,7 @@
     {{ else }}
     <link href="https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" rel="stylesheet">
     {{ end }}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
     {{ block "meta" . }}{{ end }}
     <style>
@@ -26,11 +27,46 @@
         <div class="h-logo p-logo">
           <a href="{{ .Site.BaseURL }}" class="h-logo">{{ .Site.Title }}</a>
         </div>
+
+        {{ if ne (len .Site.Menus) 0 }}
+        <label for="menu-toggle" class="toggle"><i class="fa fa-bars" aria-hidden="true"></i></label>
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <nav class="menu">
+          {{ range .Site.Menus }}
+          <ul>
+            {{ range . }}
+            {{ if .HasChildren }}
+            <li>
+              <label for="menu-{{ .Name | urlize }}">{{ .Name }} <i class="fa fa-angle-down" aria-hidden="true"></i></label>
+              <input type="checkbox" id="menu-{{ .Name | urlize }}" class="hidden">
+              <ul class="child">
+                {{ range .Children }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ else }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+            {{ end }}
+          </ul>
+          {{ end }}
+        </nav>
+        {{ end }}
       </div>
     </header>
 
     <main>
-      {{ block "main" . }}{{ end }}
+      <div class="l-container">
+        <div class="l-wrapper">
+          <div class="l-main">
+            {{ block "main" . }}{{ end }}
+          </div>
+          <div class="l-sub">
+            {{ partial "sidebar.html" . }}
+          </div>
+        </div>
+      </div>
     </main>
 
     {{ block "footer_before" . }}{{ end }}
