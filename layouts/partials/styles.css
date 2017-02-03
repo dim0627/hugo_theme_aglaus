@@ -215,6 +215,21 @@ section>header span {
   padding-left: 2rem;
 }
 
+/* Parts:paginator */
+.p-paginator {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.p-paginator a {
+  display: inline-block;
+  border: 2px solid #eceff1;
+  color: #263238;
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
 /* Parts:article */
 .p-articles {
   list-style: none;
