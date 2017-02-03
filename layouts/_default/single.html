@@ -14,7 +14,7 @@
   <section>
     <header><span>Latests</span></header>
     <ul class="p-articles thin">
-      {{ range $recent_articles }}<li>{{ .Render "li_sm" }}</li>{{ end }}
+      {{ range $recent_articles }}{{ if .IsPage }}<li>{{ .Render "li_sm" }}</li>{{ end }}{{ end }}
     </ul>
   </section>
   {{ end }}
