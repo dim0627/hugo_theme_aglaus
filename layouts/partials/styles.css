@@ -538,7 +538,7 @@ article.li.sm .header-wrapper {
 }
 
 .article-body figure img { max-width: 100%; }
-.article-body figure { margin: 1.5rem -2rem; }
+.article-body figure { margin: 1.5rem 0; }
 .article-body figure.left,
 .article-body figure.right {
   width: 15rem;
@@ -547,15 +547,15 @@ article.li.sm .header-wrapper {
   margin-left: 0;
   margin-right: 0;
 }
-.article-body figure.left { float: left; margin-right: 1rem; margin-left: -2rem; }
-.article-body figure.right { float: right; margin-left: 1rem; margin-right: -2rem; }
+.article-body figure.left { float: left; margin-right: 1rem; }
+.article-body figure.right { float: right; margin-left: 1rem; }
 
 @media (max-width: 768px) {
-  .article-body figure { margin: 1.5rem -1rem; }
+  .article-body figure { margin: 1.5rem 0; }
   .article-body figure.left,
   .article-body figure.right {
     float: none;
-    margin: 0 -1rem;
+    margin: 0;
     width: auto;
     height: auto;
   }
