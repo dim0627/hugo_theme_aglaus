@@ -9,7 +9,7 @@
 <div class="l-container">
   {{ .Render "summary" }}
 
-  {{ $recent_articles := (where .Site.Pages ".Source.Path" "!=" .Source.Path) }}
+  {{ $recent_articles := (where (where .Site.Pages ".Source.Path" "!=" .Source.Path) "IsPage" true) }}
   {{ if ne 0 (len $recent_articles) }}
   <section>
     <header><span>Latests</span></header>
