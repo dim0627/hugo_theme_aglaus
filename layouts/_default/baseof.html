@@ -14,7 +14,7 @@
     {{ with .Site.Params.ampscripts }}{{ . | safeHTML }}{{ end }}
     {{ block "meta" . }}{{ end }}
     <style amp-custom>
-      {{ replaceRE " +" " " (replaceRE "\n" "" (partial "styles.css" .)) | safeCSS }}
+      {{ replaceRE " +" " " (replaceRE "\n" "" (partial "styles.html" .)) | safeCSS }}
 
       {{ range where .Site.Pages ".Params.thumbnail" "!=" nil }} .article-{{ .Source.Path | md5 }} .thumbnail { background-image: url({{ $.Site.BaseURL }}{{ .Params.thumbnail }});  } {{ end }}
     </style>
