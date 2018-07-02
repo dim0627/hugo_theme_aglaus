@@ -5,7 +5,7 @@ description = "Theme for Hugo that supports the Accelerated Mobile Pages Project
 homepage = "https://github.com/dim0627/hugo_theme_aglaus"
 tags = ["blog", "amp"]
 features = ["amp", "responsive", "seo", "thumbnail", "share button", "structured data", "ogp", "twitter cards"]
-min_version = 0.16
+min_version = 0.42.2
 
 [author]
   name = "Daisuke Tsuji"

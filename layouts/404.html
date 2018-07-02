@@ -8,7 +8,7 @@
   </header>
 
   <ul class="p-articles">
-    {{ range first 5 .Site.Pages }}<li>{{ .Render "li_sm" }}</li>{{ end }}
+    {{ range first 5 .Site.RegularPages }}<li>{{ .Render "li_sm" }}</li>{{ end }}
   </ul>
 </div>
 {{ end }}
