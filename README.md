@@ -1,3 +1,8 @@
+```
+This theme is no longer maintained.
+```
+
+
 # What is this.
 
 This is the theme for Hugo that supports the [Accelerated Mobile Pages Project](https://www.ampproject.org/).
